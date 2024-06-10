@@ -21,7 +21,7 @@ search_params = dict(checks = 50)
 flann = cv.FlannBasedMatcher(index_params, search_params)
 
 matches = flann.knnMatch(des1,des2,k=2)
-
+ 
 # store all the good matches as per Lowe's ratio test.
 good = []
 for m,n in matches:
